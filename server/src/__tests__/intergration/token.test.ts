@@ -2,7 +2,7 @@ import { request } from "undici";
 import { createTestServer } from "../../utils/test-utils";
 const { serverURL } = createTestServer();
 
-const electricToken = {
+const Token = {
   id: expect.any(Number),
   token: expect.any(String),
   meter: expect.any(String),
@@ -26,7 +26,7 @@ describe("Token api", () => {
       expect(headers["content-type"]).toMatch(/application\/json/);
 
       for (const token of parsedBody) {
-        expect(token).toMatchObject(electricToken);
+        expect(token).toMatchObject(Token);
       }
     });
   });
@@ -49,7 +49,7 @@ describe("Token api", () => {
       });
       const response = await body.json();
       expect(statusCode).toBe(201);
-      expect(response).toMatchObject(electricToken);
+      expect(response).toMatchObject(Token);
     });
   });
 });

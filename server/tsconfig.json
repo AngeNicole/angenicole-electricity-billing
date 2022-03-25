@@ -7,11 +7,12 @@
     "moduleResolution": "node",
     "skipLibCheck": true,
     "esModuleInterop": true,
-    "types": ["node","jest"],
+    "types": ["node","@types/jest"],
     "paths": {
       "~/*": ["./src/*"]
-    }
+    },
   },
+  
   "include": ["src/**/*.ts", "src/controllers/tokens.ts"],
-  "exclude": ["node_modules", "dist", "coverage", "src/__tests__"]
+  "exclude": ["**/*.spec.ts","node_modules", "dist", "coverage", "src/__tests__"]
 }

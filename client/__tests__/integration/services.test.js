@@ -1,7 +1,7 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom"
-import BuyElectricityPage from '../../src/pages/BuyElectricityPage';
+import BuyElectricityPage from '../../src/pages/BuyPage';
 
 describe('Buy electricity', () => {
 

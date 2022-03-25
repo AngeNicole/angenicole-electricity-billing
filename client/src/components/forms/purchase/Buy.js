@@ -4,7 +4,7 @@ import toast from 'react-hot-toast';
 import { connect } from '../../../service/Api';
 import Button from '../../custom/Button'
 
-export default function BuyElectricity() {
+export default function Buy() {
 
   const [meter, setMeter] = useState({
     meterNumber: "",
